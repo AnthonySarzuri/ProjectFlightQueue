@@ -2,11 +2,22 @@ import java.time.LocalDateTime
 
 class Vuelo (
     val origen:String="La Paz",
-    val destino:String="",
+    val destino:String,
+    val horaSalida:LocalDateTime,
     val horaLlegada:LocalDateTime,
-    val codigoVuelo:String="",
+    val codigoVuelo:String,
+    val aeronave: String,
+    val precio: Int
         ){
-    //val aerolinea:List<String>("")
-    val aeronave= mutableListOf<String>("Boeing 737-300","Boeing 737-700","Boeing 737-800")
-    val aerolinea= mutableListOf<String>("BOA","AMAZONAS","TAM")
+    fun mostrarDatosVuelo(){
+        println("""
+            Origen: $origen
+            Destino: $destino
+            Fecha y hora de salida: $horaSalida
+            Fecha y hora de llegada: $horaLlegada
+            Codigo de vuelo: $codigoVuelo
+            Aeronave: $aeronave
+            Precio: $precio
+        """.trimIndent())
+    }
 }
