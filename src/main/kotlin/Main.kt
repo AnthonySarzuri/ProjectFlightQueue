@@ -9,6 +9,7 @@ fun main() {
     println("--------------------------------------------\n")
 
     val i: Int=0
+    var fsit: Int = 0
     println("Estos son los vuelos disponibles del mes de Octubre:")
 
     for (i in EnumVuelos.values()) {
@@ -45,7 +46,9 @@ fun main() {
             else -> {
                 print("Elija un asiento valido")
             }
+
         }
+        fsit=sit
     }
     if (flight==2){
         println("Estos son los asientos disponibles:")
@@ -128,7 +131,7 @@ fun main() {
     println("------------------------------\n")
     println(usuario.mostrarDatosPasajero())
     println(usuarioVuelo.mostrarDatosVuelo())
-    //OJO falta mostrar el asiento reservado xd
+    println("Asiento: $fsit")
 }
 
 
